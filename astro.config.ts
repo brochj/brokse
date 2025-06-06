@@ -23,7 +23,7 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   site: 'https://brochj.github.io',
-  base: 'brokse',
+  base: '/brokse/',
   output: 'static',
 
   integrations: [
