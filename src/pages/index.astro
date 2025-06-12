@@ -1,103 +1,101 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
 import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import Steps from '~/components/widgets/Steps.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'BROK — Soluções Elétricas',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-
+<!-- Sua Energia, Nossos Projetos: Excelência em Soluções Elétricas -->
   <Hero
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
+        text: 'Solicite um Orçamento',
         href: 'https://github.com/onwidget/astrowind',
+        // href: 'https://github.com/onwidget/astrowind',
         target: '_blank',
         icon: 'tabler:download',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Conheça Nossos Serviços', href: '#features' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+    image={{ src: '~/assets/images/man-repairer-making-electricity-project-in-house-repairs-planning-drawing.webp', alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white"> Astro 5.0</span> + Tailwind CSS
+      Sua Energia, Nossos Projetos<span class="hidden xl:inline">creating websites with</span>
+      <span class="text-accent dark:text-white">Excelência em Soluções Elétricas</span> 
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
+        <span class="font-semibold">Da residência à indústria</span> , transformamos ideias em realidade com projetos elétricos seguros, eficientes e inovadores. Especialistas em instalações residenciais, comerciais, prediais, industriais.</span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+    
     </Fragment>
   </Hero>
 
   <!-- Note Widget ******************* -->
 
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
+  <Note title="Nossa Filosofia:" description="Projetos Elétricos com Segurança, Eficiência e Qualidade." />
 
   <!-- Features Widget *************** -->
 
   <Features
     id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
+    tagline="Nossos Serviços"
+    title="Projetos Elétricos para cada Necessidade"
     subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Projetos Residenciais e Prediais',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
+          'Desenvolvemos projetos elétricos completos para casas, apartamentos e edifícios, garantindo segurança, funcionalidade e economia de energia. Do dimensionamento à iluminação, cuidamos de cada detalhe.',
+        icon: 'tabler:bolt',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Projetos Comerciais e Industriais',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
+          'Soluções robustas e personalizadas para o seu negócio. Projetos elétricos que atendem às demandas de lojas, escritórios, fábricas e grandes complexos, focando em eficiência operacional e conformidade com normas.',
+        icon: 'tabler:building-factory-2',
       },
       {
-        title: 'Best Practices',
+        title: 'Comandos Elétricos e Automação',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
+          'Especialistas em sistemas de comandos elétricos e automação industrial. Otimize processos, aumente a produtividade e garanta a segurança de suas máquinas e equipamentos com nossas soluções inteligentes.',
+        icon: 'tabler:automation',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Consultoria e Laudos Técnicos',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
+          "Oferecemos consultoria especializada e emissão de laudos técnicos para instalações elétricas, garantindo a conformidade com as normas vigentes e a segurança do seu patrimônio.",
+        icon: 'tabler:home-shield',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Biblioteca CAD/Revit Essencial',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
+          'Acelere seus projetos com nossa vasta biblioteca de desenhos, blocos e templates para AutoCAD e Revit, desenvolvidos para projetos elétricos, arquitetônicos e civis.',
+        icon: 'tabler:writing',
+    },
+    {
+        title: 'Conhecimento e Ferramentas para Projetos Elétricos',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
+          'Aprimore suas habilidades e otimize seu trabalho com nossos e-books, guias práticos e planilhas inteligentes, focados em facilitar a criação de projetos elétricos conforme as normas.',
+        icon: 'tabler:brain',
+    },
     ]}
   />
 
