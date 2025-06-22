@@ -20,7 +20,7 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-<!-- Sua Energia, Nossos Projetos: Excelência em Soluções Elétricas -->
+  <!-- Sua Energia, Nossos Projetos: Excelência em Soluções Elétricas -->
   <Hero
     actions={[
       {
@@ -33,18 +33,21 @@ const metadata = {
       },
       { text: 'Conheça Nossos Serviços', href: '#features' },
     ]}
-    image={{ src: '~/assets/images/man-repairer-making-electricity-project-in-house-repairs-planning-drawing.webp', alt: 'AstroWind Hero Image' }}
+    image={{
+      src: '~/assets/images/man-repairer-making-electricity-project-in-house-repairs-planning-drawing.webp',
+      alt: 'AstroWind Hero Image',
+    }}
   >
     <Fragment slot="title">
       Sua Energia, Nossos Projetos<span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white">Excelência em Soluções Elétricas</span> 
+      <span class="text-accent dark:text-white">Excelência em Soluções Elétricas</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Da residência à indústria</span> , transformamos ideias em realidade com projetos elétricos seguros, eficientes e inovadores. Especialistas em instalações residenciais, comerciais, prediais, industriais.</span
+        <span class="font-semibold">Da residência à indústria</span> , transformamos ideias em realidade com projetos elétricos
+        seguros, eficientes e inovadores. Especialistas em instalações residenciais, comerciais, prediais, industriais.</span
       >
-    
     </Fragment>
   </Hero>
 
@@ -81,7 +84,7 @@ const metadata = {
       {
         title: 'Consultoria e Laudos Técnicos',
         description:
-          "Oferecemos consultoria especializada e emissão de laudos técnicos para instalações elétricas, garantindo a conformidade com as normas vigentes e a segurança do seu patrimônio.",
+          'Oferecemos consultoria especializada e emissão de laudos técnicos para instalações elétricas, garantindo a conformidade com as normas vigentes e a segurança do seu patrimônio.',
         icon: 'tabler:home-shield',
       },
       {
@@ -89,13 +92,13 @@ const metadata = {
         description:
           'Acelere seus projetos com nossa vasta biblioteca de desenhos, blocos e templates para AutoCAD e Revit, desenvolvidos para projetos elétricos, arquitetônicos e civis.',
         icon: 'tabler:writing',
-    },
-    {
+      },
+      {
         title: 'Conhecimento e Ferramentas para Projetos Elétricos',
         description:
           'Aprimore suas habilidades e otimize seu trabalho com nossos e-books, guias práticos e planilhas inteligentes, focados em facilitar a criação de projetos elétricos conforme as normas.',
         icon: 'tabler:brain',
-    },
+      },
     ]}
   />
 

@@ -1,0 +1,325 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const imgProjetoEletrico1 = '~/assets/images/servicos/pb-projeto-eletrico-1.png';
+const imgQuadroLigacoes = '~/assets/images/servicos/quadro-ligacoes.png';
+const imgDetalheAterramento = '~/assets/images/servicos/detalhe-aterramento.png';
+const imgPlantaCotagem1 = '~/assets/images/servicos/planta-cotagem-1.png';
+
+const metadata = {
+  title: 'Projeto Elétrico Residencial',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Serviços"
+    title="Projeto Elétrico Residencial"
+    subtitle=" Nossa abordagem detalhada com dimensionamento preciso elimina retrabalhos e otimiza recursos, garantindo soluções que reduzem custos de execução e de energia."
+    actions={[
+      { variant: 'primary', target: '', text: 'Veja os itens de um projeto elétrico', href: '#conteudo-do-projeto' },
+    ]}
+    image={{
+      src: imgProjetoEletrico1,
+      alt: 'AstroWind Hero Image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="conteudo-do-projeto"
+    title="Quais são os principais itens que compõem um projeto elétrico?"
+    subtitle="Escolha-nos pela documentação detalhada e suporte durante a execução, atendendo às suas necessidades atuais e futuras com total segurança."
+    columns={3}
+    items={[
+      {
+        title: 'Plantas baixas',
+        description:
+          'Desenho com a localização de todos os pontos de energia (tomadas, interruptores, iluminação), pontos de telefone, TV e internet.',
+        icon: 'tabler:devices-bolt',
+      },
+      {
+        title: 'Cálculo da demanda total',
+        description:
+          'Ao saber a sua demanda de energia, você poderá escolher o fornecimento da concessionária mais adequado ao seu uso.',
+        icon: 'tabler:clock-dollar',
+      },
+      {
+        title: 'Diagramas unifilares',
+        description:
+          'Mostram de forma simplificada a ligação dos circuitos e dos componentes no quadro de distribuição.',
+        icon: 'tabler:circuit-switch-open',
+      },
+      {
+        title: 'Lista de materiais',
+        description:
+          'Com um lista detalhada de todos os materiais necessários para a execução do projeto. tem previsão de quanto irá investir',
+        icon: 'tabler:license',
+      },
+      {
+        title: 'Dimensionamento da proteção',
+        description:
+          'Os dispositivos de proteção, como IDR, disjuntores e DPS, são cruciais para a segurança de sua vida, de sua família, de sua residência e de seus equipamentos. ',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Dimensionamento de condutores (fios e cabos) e eletrodutos',
+        description:
+          'Um dimensionamento preciso garante a segurança da instalação, prevenindo superaquecimento, curtos-circuitos, incêndios e garante economia da compra de materiais. ',
+        icon: 'tabler:plug-connected',
+      },
+      {
+        title: 'Memorial descritivo',
+        description: 'Manual explicando as soluções adotadas e as especificações técnicas',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Detalhes do quadro de distribuição',
+        description: `Desenho da disposição e ligações dos disjuntores, Dispositivos de Proteção contra Surtos (DPS), e Interruptores Diferenciais Residuais (IDR) dentro do quadro de distribuição. Trazendo agilidade e precisão na hora da montagem do quadro.`,
+        icon: 'tabler:dual-screen',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    tagline=""
+    title="Projetos Entregues"
+    stats={[
+      { title: 'Projetos', amount: '14', icon: 'tabler:home-edit' },
+      { title: 'Demanda', amount: '740 kVA', icon: 'tabler:bolt' },
+      { title: 'Área', amount: '4408', icon: 'tabler:meter-square' },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'High-Quality Designs',
+        description:
+          'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'Customization Tools',
+        description:
+          'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Pre-Designed Elements',
+        description:
+          'Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.',
+        icon: 'tabler:presentation',
+      },
+      {
+        title: 'Preview and Mockup Views',
+        description:
+          'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.',
+        icon: 'tabler:carousel-horizontal',
+      },
+    ]}
+    image={{
+      src: imgQuadroLigacoes,
+      alt: 'Features Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Quadros de distribuição</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Padronização Técnica',
+        description:
+          'Os detalhes de execução estabelecem um padrão técnico rigoroso para toda a instalação elétrica. Isso garante uniformidade nos acabamentos e conformidade com as normas técnicas em todos os pontos da edificação.',
+        icon: 'tabler:ruler',
+      },
+      {
+        title: 'Qualidade Assegurada',
+        description:
+          'Com detalhamentos construtivos assegura que a equipe de execução reproduza com fidelidade a solução projetada.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Agilidade no Canteiro de Obras',
+        description:
+          'As pranchas de detalhes eliminam dúvidas ou soluções improvisadas. Fazendo com que o projeto avance de forma muito mais rápida e eficiente',
+        icon: 'tabler:puzzle',
+      },
+    ]}
+    image={{
+      src: imgDetalheAterramento,
+      alt: 'Benefits Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Detalhes de execução</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Precisão na Execução',
+        description:
+          'As planta baixas de cotas indicam a localização exata de cada ponto. Isso minimiza erros na hora da instalação',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Otimização de tempo',
+        description:
+          'Com cada ponto cotado, a equipe de instalação ganha agilidade incomparável. Não há tempo perdido com medições improvisadas ou dúvidas sobre a localização. ',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Redução de Retrabalhos e Atrasos',
+        description:
+          'Menos erros significam menos retrabalho. Isso previne atrasos significativos na entrega do projeto e poupa o tempo que seria gasto em correções dispendiosas.',
+        icon: 'tabler:coin',
+      },
+    ]}
+    image={{
+      src: imgPlantaCotagem1,
+      alt: 'Imagen da planta baixa de cotas',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Cotagens</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <!-- <Testimonials
+    title="Words from real customers"
+    testimonials={[
+      {
+        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
+        name: 'Emily Kennedy',
+        job: 'Front-end developer',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: 'Emily Kennedy Image',
+        },
+      },
+      {
+        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
+        name: 'Sarah Hansen',
+        job: 'Photographer',
+        image: {
+          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Sarah Hansen Image',
+        },
+      },
+      {
+        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
+        name: 'Mark Wilkinson',
+        job: 'Small business owner',
+        image: {
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'Mark Wilkinson Image',
+        },
+      },
+    ]}
+    callToAction={{
+      target: '_blank',
+      text: 'More testimonials...',
+      href: 'https://github.com/onwidget/astrowind',
+      icon: 'tabler:chevron-right',
+    }}
+  /> -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Veja a média de preços',
+        href: '/',
+      },
+    ]}
+    title="Dive into our template collection"
+    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
+  />
+
+  <CallToAction
+    title="Coming soon"
+    subtitle="We are working on the content of these demo pages. You will see them very soon. Stay tuned Stay tuned!"
+    actions={[
+      {
+        variant: 'secondary',
+        text: 'Baixar Exemplo de projeto',
+        href: 'https://github.com/onwidget/astrowind',
+        icon: 'tabler:download',
+      },
+    ]}
+  />
+
+  <FAQs
+    title="Perguntas Frequentes"
+    subtitle="Escolher o projeto elétrico ideal para sua casa é uma decisão importante, e sabemos que podem surgir muitas dúvidas. Se você tem perguntas sobre nossos serviços para residências, o processo de elaboração ou os custos envolvidos, este é o lugar certo para encontrar as respostas."
+    columns={1}
+    items={[
+      {
+        title: 'Em que fase da construção devo contratar o projeto elétrico?',
+        description:
+          'O ideal é que o projeto elétrico seja desenvolvido na fase de planejamento da obra, antes do início da alvenaria e da passagem de tubulações. Ter o projeto em mãos desde o começo permite que ele seja integrado harmoniosamente com os projetos arquitetônico, hidráulico e estrutural, evitando retrabalhos, custos extras e atrasos na construção.',
+      },
+      {
+        title: 'Quanto tempo leva para ter um projeto elétrico pronto?',
+        description:
+          'O prazo de entrega de um projeto elétrico varia conforme a complexidade e o tamanho da residência. Em geral, após a coleta de todas as informações necessárias (plantas arquitetônicas, suas necessidades, etc.), um projeto pode levar de 5 a 15 dias úteis para ser concluído. Podemos fornecer uma estimativa mais precisa após entender os detalhes do seu projeto.',
+      },
+      {
+        title: 'Can I switch between plans?',
+        description:
+          'Certainly! You can easily upgrade or downgrade your plan, at any time, to find the one that best suits your evolving requirements.',
+      },
+      {
+        title: 'What payment methods do you accept?',
+        description:
+          'We accept major credit cards and online payment methods to ensure a convenient and secure transaction process.',
+      },
+      {
+        title: 'Are there any hidden fees beyond the displayed cost?',
+        description:
+          'No, the subscription cost covers all the features and templates listed under each plan. There are no hidden fees or extra charges.',
+      },
+    ]}
+  />
+  <CallToAction
+    title="Ainda tem dúvidas?"
+    subtitle="Responderemos o mais rápido possível."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Chame-nos no WhatsApp',
+        href: 'https://github.com/onwidget/astrowind',
+        icon: 'tabler:brand-whatsapp',
+      },
+    ]}
+  />
+</Layout>

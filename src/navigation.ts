@@ -54,6 +54,10 @@ export const headerData = {
           text: 'Privacy policy',
           href: getPermalink('/privacy'),
         },
+        {
+          text: 'Projeto Elétrico Residencial',
+          href: getPermalink('/projeto-eletrico-residencial'),
+        },
       ],
     },
     {
