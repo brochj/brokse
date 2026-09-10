@@ -1,0 +1,91 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import PortfolioSection from '~/components/widgets/PortfolioSection.astro';
+import { WHATSAPP_URL } from '~/config/constants';
+import { headerData } from '~/navigation';
+
+const imgRC180 = '~/assets/images/portfolio/rc-180.png'
+const metadata = {
+  title: 'SaaS Landing Page',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      {...headerData}
+      actions={[
+        {
+          variant: 'secondary',
+          text: 'Login',
+          href: '#',
+        },
+        {
+          variant: 'primary',
+          text: 'Sign Up',
+          href: '#',
+        },
+      ]}
+      isSticky
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+ <PortfolioSection
+    title="Residência RC-180"
+    subtitle="Projeto elétrico residencial desenvolvido em BIM de uma casa térrea de 180m² (5.5x33m)"
+    tagline="Portfólio"
+    files={[
+      { 
+        variant: 'primary',
+        title: 'Ver Planta de cotas e eletrodutos',
+        href: '/portfolio/rc-180/01-infraestrutura-eletrica-terreo.pdf',
+      },
+      { 
+        variant: 'primary',
+        title: 'Ver Planta de fiação e VDI',
+        href: '/portfolio/rc-180/02-planta-de-fiacao-e-planta-vdi.pdf',
+      },
+      { 
+        variant: 'primary',
+        title: 'Ver Diagrama Unifilar',
+        href: '/portfolio/rc-180/03-diagrama-unifilar.pdf',
+      },
+      { 
+        variant: 'primary',
+        title: 'Ver Quadro de Cargas e Quantitativos',
+        href: '/portfolio/rc-180/04-quadro-de-cargas-e-quantitativos.pdf',
+      },
+    ]}
+    image={{
+      src: imgRC180,
+      alt: 'Projeto elétrico residencial RC-180',
+    }}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Solicitar orçamento',
+        href: WHATSAPP_URL,
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Gostou do que viu?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Fale conosco e descubra como podemos desenvolver o projeto elétrico da sua residência.
+    </Fragment>
+  </CallToAction>
+  
+</Layout>

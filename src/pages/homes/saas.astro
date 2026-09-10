@@ -1,17 +1,21 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
 import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
-import Features from '~/components/widgets/Features.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
-import Content from '~/components/widgets/Content.astro';
+import PortfolioSection from '~/components/widgets/PortfolioSection.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
 
-import { headerData } from '~/navigation';
-import FAQs from '~/components/widgets/FAQs.astro';
+import Button from '~/components/ui/Button.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import { headerData } from '~/navigation';
+import { getAsset } from '~/utils/permalinks';
 
+const imgQDC3D = '~/assets/images/portfolio/rc-180.png'
 const metadata = {
   title: 'SaaS Landing Page',
 };
@@ -108,6 +112,63 @@ const metadata = {
 
   <!-- Content Widget **************** -->
 
+    <Button  target='_blank' text='Prancha - Ver planta de eletrodutos' href={getAsset('/portfolio/rc-180/A1-01-Infraestrutura-Eletrica-Terreo.pdf')} />
+  <PortfolioSection
+    title="Residência RC-180"
+    subtitle="Projeto elétrico residencial desenvolvido em BIM."
+    tagline="Portfólio"
+    files={[
+      {
+        title: 'Prancha — Infraestrutura Elétrica Térreo',
+        href: '/portfolio/rc-180/A1-01-Infraestrutura-Eletrica-Terreo.pdf',
+      },
+      {
+        title: 'Prancha — Fiação',
+        href: '/portfolio/rc-180/A1-02-Fiação.pdf',
+      },
+      {
+        title: 'Prancha — Diagrama Unifilar',
+        href: '/portfolio/rc-180/A1-03-Diagrama-Unifilar.pdf',
+      },
+      {
+        title: 'Prancha — Quadro de Cargas',
+        href: '/portfolio/rc-180/A1-04-Quadro-de-Cargas.pdf',
+      },
+    ]}
+    image={{
+      src: imgQDC3D,
+      alt: 'Projeto elétrico residencial RC-180',
+    }}
+  />
+  <PortfolioSection
+    isReversed
+    title="Residência RC-180"
+    subtitle="Projeto elétrico residencial desenvolvido em BIM de uma casa de 180m² (5.5x33m)"
+    tagline="Portfólio"
+    files={[
+      {
+        title: 'Prancha — Infraestrutura Elétrica Térreo',
+        href: '/portfolio/rc-180/A1-01-Infraestrutura-Eletrica-Terreo.pdf',
+      },
+      {
+        title: 'Prancha — Fiação',
+        href: '/portfolio/rc-180/A1-02-Fiação.pdf',
+      },
+      {
+        title: 'Prancha — Diagrama Unifilar',
+        href: '/portfolio/rc-180/A1-03-Diagrama-Unifilar.pdf',
+      },
+      {
+        title: 'Prancha — Quadro de Cargas',
+        href: '/portfolio/rc-180/A1-04-Quadro-de-Cargas.pdf',
+      },
+    ]}
+    image={{
+      src: imgQDC3D,
+      alt: 'Projeto elétrico residencial RC-180',
+    }}
+  />
+
   <Content
     title="Use cases"
     subtitle="Discover how AstroWind's versatile template serves as the ideal solution for various use cases, providing tailored solutions to drive success."
@@ -116,7 +177,7 @@ const metadata = {
       {
         title: 'Description:',
         description:
-          'Are you a startup with big dreams? AstroWind propels your success. Our template forges a seamless online presence, attracting investors and customers from day one. Astro 5.0 and Tailwind CSS ensure striking, responsive sites, leaving lasting impressions. Countless startups leverage AstroWind to kickstart their journey and resonate with audiences.',
+          `<Button variant='primary' target='_blank' text='Prancha - Ver planta de eletrodutos' href={getAsset('/portfolio/rc-180/A1-01-Infraestrutura-Eletrica-Terreo.pdf')}>`,
       },
       {
         title: 'Benefits:',
