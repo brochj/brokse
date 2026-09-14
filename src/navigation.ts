@@ -4,14 +4,14 @@ import { getPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: '',
+      text: 'Páginas',
       links: [
         {
           text: 'Home',
           href: getPermalink('/'),
         },
         {
-          text: 'Portfolio',
+          text: 'Portfólio',
           href: getPermalink('/servicos/portfolio'),
         },
         // {
@@ -128,7 +128,13 @@ export const headerData = {
     //   href: '#',
     // },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{
+          variant: 'primary',
+          text: 'WhatsApp',
+          href: WHATSAPP_URL,
+          icon: 'tabler:brand-whatsapp',
+          target: '_blank'
+        },],
 };
 
 export const footerData = {
@@ -137,7 +143,7 @@ export const footerData = {
       title: '',
       links: [
         { text: 'Contato', href: '#' },
-        { text: 'Portfolio', href: '#' },
+        { text: 'Portfólio', href: '#' },
         { text: 'Política de Privacidade', href: getPermalink('/privacy') },
       ],
     },

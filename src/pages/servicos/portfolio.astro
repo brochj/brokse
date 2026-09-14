@@ -10,7 +10,7 @@ import { headerData } from '~/navigation';
 
 const imgRC180 = '~/assets/images/portfolio/rc-180.png'
 const metadata = {
-  title: 'SaaS Landing Page',
+  title: 'Portfólio - Projetos Elétricos Residenciais | BROK',
 };
 ---
 
@@ -20,17 +20,16 @@ const metadata = {
       {...headerData}
       actions={[
         {
-          variant: 'secondary',
-          text: 'Login',
-          href: '#',
-        },
-        {
           variant: 'primary',
-          text: 'Sign Up',
-          href: '#',
+          text: 'WhatsApp',
+          href: WHATSAPP_URL,
+          icon: 'tabler:brand-whatsapp',
+          target: '_blank',
         },
       ]}
       isSticky
+      showToggleTheme
+      showRssFeed
     />
   </Fragment>
 
